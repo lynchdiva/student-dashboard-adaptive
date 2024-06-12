@@ -1,17 +1,22 @@
-html,
-body {
+html {
   height: 100%;
+
+  font-size: 62.5%;
 }
 
 body {
+  height: 100%;
+
   font-family: "Red Hat Display", sans-serif;
   font-style: normal;
   font-weight: 400;
+  background-color: #e7e7ec; /* #e7e7ec */
 }
 
 .container {
   display: grid;
   min-width: 300px;
+  background-color: #f0eff5;
   max-width: 1512px;
   min-height: 100%;
   margin: auto;
@@ -86,7 +91,7 @@ body {
 }
 
 .nav ul li a {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.32px;
@@ -159,7 +164,7 @@ body {
   padding-top: 60px;
   padding-left: 21px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
@@ -189,6 +194,8 @@ body {
   height: 100%;
   margin-right: 20px;
   padding-left: 60px;
+
+  font-size: 1.4rem;
 
   border: none;
   background-image: url(../icons/header/search.svg);
@@ -278,7 +285,7 @@ body {
   margin-left: 12px;
   margin-top: 18px;
 
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 12px;
   letter-spacing: 0.24px;
   color: #0a043c;
@@ -288,7 +295,7 @@ body {
 }
 
 .header__text span {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.32px;
@@ -336,7 +343,7 @@ body {
 
 .section-start__wrapper p {
   display: inline-block;
-  font-size: 21px;
+  font-size: 2.1rem;
   font-weight: 700;
   color: #333269;
 }
@@ -356,7 +363,7 @@ body {
 #customize {
   margin: 0;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #5855d6;
 
@@ -370,9 +377,8 @@ body {
   gap: 20px;
   max-width: 1270px;
   min-height: 100%;
-  margin-left: 40px;
-  margin-right: 38px;
 
+  margin: 0 38px 0;
   grid-template-areas:
     "greetings greetings ."
     "programs programs messaging"
@@ -385,8 +391,6 @@ body {
   display: grid;
   grid-template-rows: repeat(2, min-content minmax(104px, auto));
   padding: 20px 25px 15px 9px;
-
-  overflow: auto;
 
   border-radius: 20px;
   background-color: white;
@@ -409,11 +413,12 @@ body {
 .section-messaging {
   grid-area: messaging;
   grid-auto-rows: min-content;
+  max-height: 760px;
 
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   background-color: white;
 }
@@ -427,7 +432,7 @@ body {
   height: 20px;
   margin: 6px 0 0 14px;
 
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #333269;
 }
@@ -481,7 +486,7 @@ body {
   margin-top: 5px;
   padding: 0 2%;
 
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 24px;
   text-transform: uppercase;
@@ -500,7 +505,7 @@ body {
   padding: 0;
   margin-top: 11px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.24px;
   color: #333269;
@@ -517,7 +522,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 400;
   color: #9592a6;
   text-align: center;
@@ -525,7 +530,7 @@ body {
 
 .container-university__box3 div span {
   font-family: MuseoModerno;
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: 700;
   color: #9592a6;
   text-align: center;
@@ -552,13 +557,13 @@ body {
 
   text-align: center;
   font-family: MuseoModerno;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #9592a6;
 }
 
 .container-university__box4 div {
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
 
@@ -606,7 +611,7 @@ body {
   margin-top: 5px;
   padding: 0 2%;
 
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 24px;
   text-transform: uppercase;
@@ -624,7 +629,7 @@ body {
   padding: 0;
   margin-top: 11px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.24px;
   color: #333269;
@@ -642,7 +647,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 400;
   color: #9592a6;
   text-align: center;
@@ -650,7 +655,7 @@ body {
 
 .container-academy__box3 div span {
   font-family: MuseoModerno;
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: 700;
   color: #9592a6;
   text-align: center;
@@ -671,13 +676,13 @@ body {
 
   text-align: center;
   font-family: MuseoModerno;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #9592a6;
 }
 
 .container-academy__box4 div {
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
 
@@ -697,9 +702,9 @@ body {
 .section-progress__container {
   position: relative;
   max-width: 298px;
-  max-height: 270px;
   min-width: 235px;
   min-height: 170px;
+  margin: auto;
 }
 
 .section-progress__img {
@@ -748,7 +753,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.4px;
   color: #0e1566;
@@ -759,14 +764,14 @@ body {
   flex-direction: column;
   margin: 0;
 
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #9592a6;
   text-align: center;
 }
 
 .info-progress__wrapper p span {
-  font-size: 10px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   color: #9592a6;
@@ -774,7 +779,7 @@ body {
 
 .info-progress__text {
   margin: 0;
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.66px;
   text-transform: uppercase;
@@ -785,7 +790,7 @@ body {
   display: flex;
   margin-top: 5px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.28px;
@@ -801,7 +806,7 @@ body {
 
 .info-progress__container span {
   margin-left: auto;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   font-style: normal;
   letter-spacing: 0.28px;
@@ -826,7 +831,7 @@ body {
 }
 
 .section-sessions__subtitle {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #333269;
 }
@@ -857,7 +862,7 @@ body {
 .section-sessions__name p {
   margin: 0;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   color: #65708d;
 }
@@ -881,20 +886,20 @@ body {
   height: 48px;
   margin: 0;
 
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 600;
   color: #5855d6;
   text-align: center;
 }
 
 .section-sessions__schedule p span:nth-child(2) {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #9592a6;
 }
 
 .section-sessions__schedule p span:nth-child(4) {
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 600;
   color: #9592a6;
 }
@@ -905,14 +910,14 @@ body {
   justify-content: center;
   margin-left: 48px;
 
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.22px;
   color: #9592a6;
 }
 
 .schedule__text span {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.24px;
   color: #021442;
@@ -947,7 +952,7 @@ body {
   justify-content: flex-end;
   margin-top: 37px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.28px;
   color: #5855d6;
@@ -971,7 +976,7 @@ body {
   height: 57px;
   padding: 0 5%;
 
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 0.32px;
   color: #333269;
@@ -1029,7 +1034,7 @@ body {
   height: 17px;
 }
 
-#arrow-down {
+.arrow-down {
   width: 28px;
   height: 28px;
 
@@ -1067,7 +1072,7 @@ body {
 }
 
 .stories__text {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: #77838f;
@@ -1114,7 +1119,7 @@ body {
   width: 154px;
   margin-left: 14px;
 
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 16px;
   letter-spacing: 0.26px;
@@ -1128,35 +1133,34 @@ body {
   padding-right: 15px;
   margin-left: auto;
 
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.833px;
   color: #77838f;
 }
 
 .message__container span:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25px;
   height: 25px;
-  padding: 4px;
 
-  box-sizing: border-box;
-
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #fff;
 
   border-radius: 100%;
   background-color: #5855d6;
-  text-align: center;
 }
 
 /* -----------------END BLOCK MESSAGING------------------------ */
 
 /* -----------------------END MAIN---------------------------- */
 
-@media (max-width: 1250px) {
+@media screen and (max-width: 1250px) {
   .container {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: minmax(90px, 100px) 1fr;
   }
 
   .aside {
@@ -1186,5 +1190,60 @@ body {
 
   .nav img {
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  /* html {
+    font-size: 50%;
+  } */
+
+  .main {
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .main_container {
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: min-content minmax(305px, auto) minmax(363px, auto) minmax(
+        57px,
+        1fr
+      );
+
+    max-width: 900px;
+    margin: auto;
+
+    grid-template-areas:
+      "greetings greetings"
+      "programs programs"
+      "progress sessions"
+      ". . ";
+  }
+
+  .section-messaging {
+    position: fixed;
+    bottom: 0;
+    right: 6%;
+    z-index: 2;
+
+    padding-bottom: 0;
+  }
+
+  .header-messaging {
+    color: #c0beff;
+
+    background-color: #333269;
+  }
+
+  .header-messaging ~ div {
+    display: none;
+  }
+
+  .arrow-down {
+    transform: rotate(180deg);
+  }
+
+  .arrow-down path {
+    fill: #c0beff;
   }
 }
