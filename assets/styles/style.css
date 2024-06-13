@@ -1380,7 +1380,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 14px 25px;
+    padding: 14px 14px;
     border-radius: 20px;
     background-color: white;
   }
@@ -1452,5 +1452,17 @@ body {
   }
   .schedule__text {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container-university__box4,
+  .container-academy__box4,
+  .section-sessions__name p:nth-child(3) {
+    display: none;
+  }
+
+  #hidden {
+    display: none;
   }
 }
