@@ -10,12 +10,12 @@ body {
   font-family: "Red Hat Display", sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: #e7e7ec; /* #e7e7ec */
+  background-color: #e7e7ec;
 }
 
 .container {
   display: grid;
-  min-width: 300px;
+  min-width: 320px;
   background-color: #f0eff5;
   max-width: 1512px;
   min-height: 100%;
@@ -189,6 +189,17 @@ body {
   background-color: white;
 }
 
+.mobile-menu {
+  display: none;
+  width: 51px;
+  height: 100%;
+
+  border: none;
+  background-color: #333269;
+
+  cursor: pointer;
+}
+
 .form-header__input {
   width: 100%;
   height: 100%;
@@ -209,9 +220,13 @@ body {
 }
 
 .header__line {
+  display: flex;
+  align-items: center;
+}
+
+.line {
   width: 1px;
-  height: 40px;
-  margin-top: 19px;
+  height: 38px;
 
   opacity: 0.2;
   background: #07102f;
@@ -219,13 +234,13 @@ body {
 
 .wrapper {
   display: flex;
+  align-items: center;
 }
 
 .header__icon {
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin-top: 24px;
 
   border-radius: 100%;
   cursor: pointer;
@@ -275,15 +290,20 @@ body {
 .header__img {
   width: 40px;
   height: 40px;
-  margin-top: 17px;
   margin-left: 35px;
 }
+
+/* .mobile-header__img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-left: 35px;
+} */
 
 .header__text {
   display: flex;
   flex-direction: column;
   margin-left: 12px;
-  margin-top: 18px;
 
   font-size: 1.2rem;
   line-height: 12px;
@@ -306,7 +326,6 @@ body {
   flex-direction: column;
   justify-content: space-around;
   height: 30%;
-  margin-top: 25px;
   margin-left: 55px;
   margin-right: 38px;
   padding: 0 10px;
@@ -397,7 +416,7 @@ body {
 }
 .section-progress {
   grid-area: progress;
-  height: 298px;
+  max-height: 298px;
 
   border-radius: 20px;
   background-color: white;
@@ -601,7 +620,8 @@ body {
 .container-academy__box2 {
   display: flex;
   flex-direction: column;
-  width: 149px;
+  max-width: 149px;
+  min-width: 144px;
   height: 22px;
 
   margin-left: 32px;
@@ -697,6 +717,10 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px 19px 0;
+}
+
+.mobile-section-progress {
+  display: none;
 }
 
 .section-progress__container {
@@ -856,6 +880,8 @@ body {
 }
 
 .section-sessions__name {
+  display: flex;
+  justify-content: space-between;
   margin: 28px 0 22px;
 }
 
@@ -1158,9 +1184,23 @@ body {
 
 /* -----------------------END MAIN---------------------------- */
 
+/* ---------------------MEDIA QUERIES------------------------- */
+
 @media screen and (max-width: 1250px) {
   .container {
     grid-template-columns: minmax(90px, 100px) 1fr;
+  }
+
+  .header__menu {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__menu span {
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #9592a6;
   }
 
   .aside {
@@ -1193,13 +1233,9 @@ body {
   }
 }
 
-@media screen and (max-width: 1150px) {
-  /* html {
-    font-size: 50%;
-  } */
-
+@media screen and (max-width: 1175px) {
   .main {
-    padding: 0 8px;
+    padding: 0 6px;
     box-sizing: border-box;
   }
 
@@ -1209,21 +1245,20 @@ body {
         57px,
         1fr
       );
-
-    max-width: 900px;
-    margin: auto;
-
     grid-template-areas:
       "greetings greetings"
       "programs programs"
       "progress sessions"
       ". . ";
+
+    max-width: 900px;
+    margin: auto;
   }
 
   .section-messaging {
     position: fixed;
     bottom: 0;
-    right: 6%;
+    right: 8%;
     z-index: 2;
 
     padding-bottom: 0;
@@ -1245,5 +1280,177 @@ body {
 
   .arrow-down path {
     fill: #c0beff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .header {
+    grid-template-columns: min-content 5fr 1fr;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .icon-right,
+  .header__menu,
+  .header__text,
+  .header__line,
+  .section-messaging,
+  #customize {
+    display: none;
+  }
+
+  .header__form {
+    padding: 7px;
+    box-sizing: border-box;
+  }
+
+  .form-header__input {
+    margin-right: 0;
+    padding-left: 35px;
+
+    border-radius: 5px;
+    background-color: #f8f8fc;
+    background-position: 5px center;
+    background-size: 24px;
+  }
+
+  .form-header__input::placeholder {
+    opacity: 0;
+  }
+
+  .wrapper {
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .icon-left {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+  }
+
+  .header__img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+  }
+
+  .main_container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+  }
+
+  .container-university__box2 {
+    max-width: 149px;
+    padding-right: 15px;
+  }
+
+  .container-university__box4,
+  .container-academy__box4 {
+    margin-left: auto;
+  }
+
+  .section-sessions {
+    margin-bottom: 20px;
+  }
+
+  .section-progress {
+    display: none;
+  }
+
+  .mobile-section-progress {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 25px;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  .mobile-section-progress__img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 62px;
+
+    border-radius: 10px;
+
+    background-image: url(../images/progress/photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mobile-section-progress__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5855d6;
+    opacity: 0.7;
+    z-index: 1;
+
+    border-radius: 10px;
+  }
+
+  .mobile-section-progress__arrow {
+    z-index: 2;
+
+    width: 27px;
+    height: 22px;
+  }
+
+  .mobile-section-progress__text {
+    margin-top: 5px;
+    z-index: 2;
+
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: white;
+    text-shadow: 1px 1px 4px #3e3baf;
+  }
+
+  .mobile-section-progress__wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .section-sessions__name p:nth-child(3) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .container-university__box3,
+  .container-academy__box3 {
+    display: none;
+  }
+  .schedule__text {
+    margin-left: 0;
   }
 }
