@@ -1182,6 +1182,7 @@ body {
   position: sticky;
   bottom: 0;
   height: 84px;
+  z-index: 100;
 
   background-color: white;
 }
@@ -1507,7 +1508,9 @@ body {
     display: none;
   }
 
-  #hidden {
+  #time-hidden1,
+  #time-hidden2,
+  #time-hidden3 {
     display: none;
   }
 }
