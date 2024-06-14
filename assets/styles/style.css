@@ -21,7 +21,7 @@ body {
   min-height: 100%;
   margin: auto;
 
-  grid-template-rows: minmax(1vh, auto) minmax(99vh, auto);
+  grid-template-rows: minmax(6vh, auto) minmax(94vh, auto);
   grid-template-columns: minmax(100px, 240px) 1fr;
 
   grid-template-areas:
@@ -292,13 +292,6 @@ body {
   height: 40px;
   margin-left: 35px;
 }
-
-/* .mobile-header__img {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  margin-left: 35px;
-} */
 
 .header__text {
   display: flex;
@@ -1184,23 +1177,60 @@ body {
 
 /* -----------------------END MAIN---------------------------- */
 
+.mobile-nav {
+  display: none;
+  position: sticky;
+  bottom: 0;
+  height: 84px;
+
+  background-color: white;
+}
+
+.mobile-nav__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.item-mobile__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.item-mobile__link {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #9592a6;
+}
+
+.item-mobile__link span {
+  margin-top: 8px;
+}
+
+.item-mobile__img {
+  width: 25px;
+  height: 25px;
+}
+
+#mobile-dashboard {
+  width: 26px;
+  height: 26px;
+}
+
 /* ---------------------MEDIA QUERIES------------------------- */
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1255px) {
   .container {
-    grid-template-columns: minmax(90px, 100px) 1fr;
-  }
-
-  .header__menu {
-    width: 26px;
-    height: 26px;
-  }
-
-  .header__menu span {
-    width: 100%;
-    height: 2px;
-    border-radius: 5px;
-    background-color: #9592a6;
+    grid-template-columns: minmax(90px, 120px) 1fr;
   }
 
   .aside {
@@ -1231,34 +1261,41 @@ body {
   .nav img {
     margin-right: 0;
   }
-}
 
-@media screen and (max-width: 1175px) {
   .main {
-    padding: 0 6px;
+    padding: 0 6px 75px;
     box-sizing: border-box;
   }
 
   .main_container {
     grid-template-columns: 2fr 3fr;
-    grid-template-rows: min-content minmax(305px, auto) minmax(363px, auto) minmax(
-        57px,
-        1fr
-      );
+    grid-template-rows: min-content minmax(305px, auto) minmax(363px, auto) 1fr;
     grid-template-areas:
       "greetings greetings"
       "programs programs"
       "progress sessions"
       ". . ";
 
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
+  }
+
+  .header__menu {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__menu span {
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #9592a6;
   }
 
   .section-messaging {
     position: fixed;
     bottom: 0;
-    right: 8%;
+    right: 7%;
     z-index: 2;
 
     padding-bottom: 0;
@@ -1283,7 +1320,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 810px) {
   html {
     font-size: 50%;
   }
@@ -1311,7 +1348,6 @@ body {
   .header__menu,
   .header__text,
   .header__line,
-  .section-messaging,
   #customize {
     display: none;
   }
@@ -1368,10 +1404,6 @@ body {
     margin-left: auto;
   }
 
-  .section-sessions {
-    margin-bottom: 20px;
-  }
-
   .section-progress {
     display: none;
   }
@@ -1417,10 +1449,9 @@ body {
   }
 
   .mobile-section-progress__arrow {
-    z-index: 2;
-
     width: 27px;
     height: 22px;
+    z-index: 2;
   }
 
   .mobile-section-progress__text {
@@ -1452,6 +1483,20 @@ body {
   }
   .schedule__text {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .section-messaging {
+    display: none;
+  }
+
+  .main {
+    padding: 0 6px 20px;
+  }
+
+  .mobile-nav {
+    display: flex;
   }
 }
 
