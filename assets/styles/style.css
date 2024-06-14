@@ -1232,7 +1232,7 @@ body {
 
 @media screen and (max-width: 1255px) {
   .container {
-    grid-template-columns: minmax(90px, 120px) 1fr;
+    grid-template-columns: minmax(90px, 110px) 1fr;
   }
 
   .aside {
@@ -1478,17 +1478,7 @@ body {
   }
 }
 
-@media screen and (max-width: 635px) {
-  .container-university__box3,
-  .container-academy__box3 {
-    display: none;
-  }
-  .schedule__text {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
   .section-messaging {
     display: none;
   }
@@ -1499,6 +1489,22 @@ body {
 
   .mobile-nav {
     display: flex;
+  }
+}
+
+@media screen and (max-height: 798px) {
+  .section-messaging {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .container-university__box3,
+  .container-academy__box3 {
+    display: none;
+  }
+  .schedule__text {
+    margin-left: 0;
   }
 }
 
