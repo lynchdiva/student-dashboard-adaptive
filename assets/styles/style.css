@@ -482,7 +482,12 @@ body {
 
 .container-university__logo {
   margin: 5px 0 0 16px;
+  padding: 7px;
   width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(231, 228, 228, 0.8);
+  border-radius: 10px;
 }
 
 .container-university__box2 {
@@ -607,7 +612,12 @@ body {
 
 .container-academy__logo {
   margin: 5px 0 0 16px;
+  padding: 7px;
   width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(231, 228, 228, 0.8);
+  border-radius: 10px;
 }
 
 .container-academy__box2 {
