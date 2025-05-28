@@ -25,5 +25,6 @@ This project focuses on **semantic structure**, **modern CSS layout** and **resp
 - Media queries
 
 ## 🚀 How to Run
-
-Open the `index.html` file in your browser
+1. Download the ZIP archive from the https://github.com/lynchdiva/student-dashboard-adaptive
+2. Unzip the folder to your computer.
+3. Open the `index.html` file in your browser.
